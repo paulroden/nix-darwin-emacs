@@ -95,7 +95,7 @@ let
               '';
               linkerFlag = drv: "-l" + libName drv;
               plugins = with self.pkgs.tree-sitter-grammars; [
-                tree-sitter-agda
+                # tree-sitter-agda
                 tree-sitter-bash
                 tree-sitter-c
                 tree-sitter-c-sharp
@@ -120,7 +120,7 @@ let
                 tree-sitter-ruby
                 tree-sitter-rust
                 tree-sitter-scala
-                tree-sitter-swift
+                # tree-sitter-swift
                 tree-sitter-toml
                 tree-sitter-tsx
                 tree-sitter-typescript
