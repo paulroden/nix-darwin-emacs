@@ -33,6 +33,7 @@ let
 
               postInstall = old.postInstall + ''
                 cp ${./icons/nobu417-big-sur.icns} $out/Applications/Emacs.app/Contents/Resources/Emacs.icns
+                cp ${./patches/emacsapp.sh} $out/bin/emacs
               '';
 
               postPatch = old.postPatch + ''
