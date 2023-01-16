@@ -40,6 +40,7 @@ let
 #! nix-shell -i bash -p bash
 exec ${placeholder "out"}/Applications/Emacs.app/Contents/MacOS/Emacs "$@"
 ' > $out/bin/emacs
+                chmod a+x $out/bin/emacs
               '';
 
               postPatch = old.postPatch + ''
