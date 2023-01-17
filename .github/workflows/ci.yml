@@ -9,7 +9,7 @@ jobs:
   refresh-overlay:
     name: Refresh inputs
     runs-on: macos-latest
-    if: github.repository_owner == 'c4710n'
+    if: github.repository_owner == 'paulroden'
     steps:
     - name: Checkout repository
       uses: actions/checkout@v2.3.4
