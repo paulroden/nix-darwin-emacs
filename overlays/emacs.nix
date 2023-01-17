@@ -25,7 +25,6 @@ let
 
                 # GNU Emacs's main role is an AXTextField instead of AXWindow, it has to be fixed manually.
                 ./patches/fix-window-role.patch
-
                 ./patches/system-appearance.patch
                 ./patches/poll.patch
                 ./patches/round-undecorated-frame.patch
@@ -148,7 +147,7 @@ exec ${placeholder "out"}/Applications/Emacs.app/Contents/MacOS/Emacs "$@"
       ]);
 in
 {
-  emacsGit = mkGitEmacs "emacs-git" ../repos/emacs/emacs-master.json {
+  emacsGit = mkGitEmacs "emacs-git" ../repos/emacs/emacs-master-pinned.json {
     withSQLite3 = true;
     withWebP = true;
   };
